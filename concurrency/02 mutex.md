@@ -21,7 +21,8 @@
 #include <sys/syscall.h>
 #include <linux/futex.h>
 #include <cstdint>
-#include <limits.h>
+#include <climits>
+//#include <limits.h>
 
 // Общий адрес фьютекса (слово фьютекса).
 uint32_t addr;  
