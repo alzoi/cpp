@@ -14,10 +14,12 @@
 
 ## Примеры
 Системный вызов [futex](https://man7.org/linux/man-pages/man2/futex.2.html), с операцией FUTEX_WAIT_PRIVATE. 
-Операция FUTEX_WAIT_PRIVATE приватно для одного процесса проверяет, что значение в слове фьютекса, указанном с помощью адреса uaddr все еще содержит ожидаемое значение val, и если да, то поток приостанавливается в ожидании операции FUTEX_WAKE над словом фьютекса.
-Вызов работает в ОС Linux:
+Операция **FUTEX_WAIT_PRIVATE** приватно для одного процесса проверяет, что значение в слове фьютекса (указанном с помощью адреса uaddr) всё ещё содержит ожидаемое значение val, и если да, то ОС останавливает поток и помещает его в очередь приостановленных потоков. Потоки или поток возобновят свою работу после выполнения системного вызова SYS_futex с операцией **FUTEX_WAKE** над словом фьютекса.
+Вызов работает в ОС Linux:  
+**Поток № 01**
 ```cpp
-  uint32_t addr;
+  uint32_t addr;  
   int val_expected = 0;
-  int foo = syscall( SYS_futex, &addr, FUTEX_WAIT_PRIVATE, val_expected, nullptr, nullptr, 0);
+  // Приостанавливаем текущий поток.
+  int foo = syscall( SYS_futex, &addr, FUTEX_WAIT_PRIVATE, val_expected, nullptr, nullptr, 0);  
 ```
