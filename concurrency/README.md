@@ -1,4 +1,4 @@
-# Курс Теория и практика многопоточной синхронизации (ТПМС, Concurrency)
+# Теория и практика многопоточной синхронизации (ТПМС, Concurrency)
 
 # Ссылки
 [Лекции 2022](https://youtube.com/playlist?list=PL4_hYwCyhAva37lNnoMuBcKRELso5nvBm)  
