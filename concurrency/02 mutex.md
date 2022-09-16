@@ -10,7 +10,7 @@
 
 **atomic** создан из [spinlock](https://github.com/alzoi/C/blob/master/spinlock.md) - цикла в пространстве пользователя, который постоянно проверяет установку определённого значения в ячейке памяти. spinlock нагружает CPU.  
 
-**mutex** создан из futex - очередь остановленных (не выполняющихся) потоков в ядре ОС.  mutex использует [системный вызов](https://man7.org/linux/man-pages/man2/futex.2.html) к ядру ОС, обращение занимает время, но остановленный поток не нагружает CPU. Подробнее в [видео](https://youtu.be/xKqO04SN6C0?list=PLEJxKK7AcSEGPOCFtQTJhOElU44J_JAun&t=161).
+**mutex** создан из futex - очередь остановленных (не выполняющихся) потоков в ядре ОС.  mutex использует [системный вызов](https://man7.org/linux/man-pages/man2/futex.2.html) к ядру ОС, обращение занимает время, но остановленный поток не нагружает CPU, помещённые в очередь ожидания потоки не получают процессорного времени. Подробнее в [видео](https://youtu.be/xKqO04SN6C0?list=PLEJxKK7AcSEGPOCFtQTJhOElU44J_JAun&t=161).
 
 ## Примеры
 Системный вызов [futex](https://man7.org/linux/man-pages/man2/futex.2.html), с операцией FUTEX_WAIT_PRIVATE. 
