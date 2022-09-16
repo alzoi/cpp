@@ -39,7 +39,7 @@ void thread_t01() {
 // Поток № 02.
 void thread_t02() {  
   
-  int val_count = 1;
+  size_t val_count = 1;
   
   // Просим ядро ОС разбудить первый поток в очереди, ожидающих на адресе addr.
   int foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_count, nullptr, nullptr, 0);
@@ -48,7 +48,7 @@ void thread_t02() {
 // Поток № 03.
 void thread_t03() {  
   
-  int val_count = INT_MAX;
+  size_t val_count = INT_MAX;
   
   // Просим ядро ОС разбудить все потоки, ожидающие на адресе addr.
   int foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_count, nullptr, nullptr, 0);
