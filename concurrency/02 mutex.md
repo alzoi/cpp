@@ -14,7 +14,7 @@
 
 ## Примеры
 Системный вызов [futex](https://man7.org/linux/man-pages/man2/futex.2.html), с операцией FUTEX_WAIT_PRIVATE. 
-Операция **FUTEX_WAIT_PRIVATE** приватно для одного процесса проверяет, что значение в слове фьютекса (указанном с помощью адреса uaddr) всё ещё содержит ожидаемое значение val, и если да, то ОС останавливает поток и помещает его в очередь приостановленных потоков. Потоки или поток возобновят свою работу после выполнения системного вызова SYS_futex с операцией **FUTEX_WAKE** над словом фьютекса.
+Операция **FUTEX_WAIT_PRIVATE** приватно для одного процесса проверяет, что значение в слове фьютекса (указанном с помощью адреса uaddr) всё ещё содержит ожидаемое значение val, и если да, то ОС останавливает поток и помещает его в очередь приостановленных потоков. Потоки или поток возобновят свою работу после выполнения системного вызова SYS_futex с операцией **FUTEX_WAKE_PRIVATE** над словом фьютекса.
 Вызов работает в ОС Linux:  
 ```cpp
 #include <cstdint>
@@ -37,7 +37,7 @@ void thread_t02() {
   int val_expected = 1;
   
   // Просим ядро ОС разбудить первый поток в очереди, ожидающих на адресе addr.
-  int foo = syscall( SYS_futex, &addr, FUTEX_WAKE, val_expected, nullptr, nullptr, 0);
+  int foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_expected, nullptr, nullptr, 0);
 }
 
 // Поток № 03.
@@ -46,7 +46,7 @@ void thread_t03() {
   int val_expected = INT_MAX;
   
   // Просим ядро ОС разбудить все потоки, ожидающие на адресе addr.
-  int foo = syscall( SYS_futex, &addr, FUTEX_WAKE, val_expected, nullptr, nullptr, 0);
+  int foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_expected, nullptr, nullptr, 0);
 }
 
 ```
