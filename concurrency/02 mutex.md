@@ -33,7 +33,7 @@ void thread_t01() {
   int val_expected = 0;
   
   // Приостанавливаем текущий поток до получения события от других потоков.
-  int foo = syscall( SYS_futex, &addr, FUTEX_WAIT_PRIVATE, val_expected, nullptr, nullptr, 0);
+  long foo = syscall( SYS_futex, &addr, FUTEX_WAIT_PRIVATE, val_expected, nullptr, nullptr, 0);
 }
 
 // Поток № 02.
@@ -42,7 +42,7 @@ void thread_t02() {
   uint32_t val_count = 1;
   
   // Просим ядро ОС разбудить первый поток в очереди, ожидающих на адресе addr.
-  int foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_count, nullptr, nullptr, 0);
+  long foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_count, nullptr, nullptr, 0);
 }
 
 // Поток № 03.
@@ -51,7 +51,7 @@ void thread_t03() {
   uint32_t val_count = INT_MAX;
   
   // Просим ядро ОС разбудить все потоки, ожидающие на адресе addr.
-  int foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_count, nullptr, nullptr, 0);
+  long foo = syscall( SYS_futex, &addr, FUTEX_WAKE_PRIVATE, val_count, nullptr, nullptr, 0);
 }
 
 ```
