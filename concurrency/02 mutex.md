@@ -14,7 +14,7 @@
 Реализацию функции пробуждения **wakeup** спящего в очереди потока можно посмотреть в книге [xv6 строка 2964](https://pdos.csail.mit.edu/6.828/2018/xv6/xv6-rev11.pdf)
 Реализацию функции засыпания **sleep** - помещения потока в очередь ожидания можно посмотреть в книге [xv6 строка 2874](https://pdos.csail.mit.edu/6.828/2018/xv6/xv6-rev11.pdf).
 ## Пример MUTEX
-![image](https://user-images.githubusercontent.com/20499566/191020237-45519fe6-903a-4361-a9af-62b79eed86a8.png)
+![image](https://user-images.githubusercontent.com/20499566/191020364-aea310fb-81fa-4a10-a175-b4dc0cb676b7.png)
 
 ## Примеры FUTEX
 Системный вызов [futex](https://man7.org/linux/man-pages/man2/futex.2.html), с операцией FUTEX_WAIT_PRIVATE. 
