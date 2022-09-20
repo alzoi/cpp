@@ -52,7 +52,8 @@ lock_addr:
 .global _start
 
 _start:
-    movq $0x1, %rcx # 
+    
+    movq $0x1, %rcx # Присваиваем в rcx = 1, это значение для установки в ячейку lock_addr
     xorq %rax, %rax # В регистре значение ноль rax = 0
     
     # Проверяем, что в ячейке памяти lock_addr значение 0, как в rax,
