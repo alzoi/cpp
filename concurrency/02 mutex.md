@@ -42,7 +42,30 @@ je .L2
 Флаг ZF = 1, если значение второго операнда равно значению регистра rax, в противном случае ZF = 0.  
 Явный префикс lock разрешает атомарное выполнение инструкции **cmpxchg**.
 ```asm
+.section .data
 
+lock_addr:
+  .quad 1
+
+.section .text
+
+.global _start
+
+_start:
+    movq $0x1, %rcx
+    xorq %rax, %rax
+    lock cmpxchg %rcx, lock_addr(%rip)    
+    jne .L2_no_locked            # Переход к метке, если ZF != 0
+
+.L2_locked:
+    mov $60, %rax                # system call 60 is exit
+    mov $0x0, %rdi
+    syscall
+
+.L2_no_locked:
+    mov $60, %rax
+    mov $1, %rdi
+    syscall
 ```
 
 ## Примеры FUTEX
