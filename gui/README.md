@@ -6,3 +6,6 @@
 [C++ for Linux, Windows and MacOS - building with wxWidgets and CMake](https://www.youtube.com/watch?v=MfuBS9n5_aY&list=PL0qQTroQZs5vVmTuBew-nTx9DIu6rRl2c)  
 [Уроки по WinAPI](https://www.youtube.com/watch?v=UluSI1P4Ijg&list=PLBOPkQsFLCR2H7_0Ss0W6y703J_ySRGi_)  
 [Wine - программное обеспечение, позволяющее запускать Windows приложения в Linux ОС](https://www.winehq.org/)  
+```cmd
+wine win_app.exe
+```
