@@ -1,4 +1,6 @@
 # C++
+# Ресурсы для изучения
+https://hackingcpp.com/  
 
 # Курсы по C++
 https://compscicenter.ru/courses/cpp-1/  
