@@ -13,4 +13,5 @@ wine win_app.exe
 ```
 
 ## Графические библиотеки
-https://www.sfml-dev.org/  
+[SFML](https://www.sfml-dev.org/)  
+[SDL](https://www.libsdl.org/)  
