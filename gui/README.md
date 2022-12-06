@@ -17,9 +17,8 @@ wine win_app.exe
 
 ## Графические библиотеки
 [GLUT/freeglut](https://www.opengl.org/resources/libraries/glut/)  
-[GLFW](https://www.glfw.org/)  
 [SDL](https://www.libsdl.org/)  
 [SFML](https://www.sfml-dev.org/)  
- 
+[GLFW](https://www.glfw.org/)   
 
 
