@@ -19,3 +19,4 @@ wine win_app.exe
 [SFML](https://www.sfml-dev.org/)  
 [SDL](https://www.libsdl.org/)  
 [GLFW](https://www.glfw.org/)  
+[GLUT](https://www.opengl.org/resources/libraries/glut/)  
