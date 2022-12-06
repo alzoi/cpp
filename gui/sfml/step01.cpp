@@ -1,6 +1,14 @@
-// Пример использования OpenGL в библиотеке SFML
-// g++ opengl.cpp -o sfml_app -lsfml-graphics -lsfml-window -lsfml-system -lGL
+# Пример использования OpenGL в библиотеке SFML
+Установка:
+```
+sudo apt-get install libsfml-dev
+```
+Компиляция:
+```
+g++ opengl.cpp -o sfml_app -lsfml-graphics -lsfml-window -lsfml-system -lGL
+```
 
+```с++
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
@@ -49,3 +57,4 @@ int main()
 
     return 0;
 }
+```
