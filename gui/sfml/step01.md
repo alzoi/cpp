@@ -8,9 +8,10 @@ sudo apt-get install libsfml-dev
 ```
 Компиляция:
 ```
-g++ opengl.cpp -o sfml_app -lsfml-graphics -lsfml-window -lsfml-system -lGL
+g++ main.cpp -o main_test -lsfml-graphics -lsfml-window -lsfml-system -lGL
 ```
 
+main.cpp
 ```cpp
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
