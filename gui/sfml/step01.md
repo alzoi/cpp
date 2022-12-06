@@ -26,13 +26,36 @@ GLfloat Vertices[4][3] = {
 
 // render routine
 void do_render() {
+
   glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+  
+  // Очистка кадра.
   glClear(GL_COLOR_BUFFER_BIT);
-  glBegin(GL_QUADS);
-  glColor3f(1.0, 1.0, 1.0);
-  for (auto Coord : Vertices)
-    glVertex3fv(Coord);
+
+  // Точка
+  glBegin(GL_POINTS);
+  glColor3d(0, 1, 0);
+  glVertex2d(0.1, 0.1);
   glEnd();
+
+  // Красный отрезок.
+  glBegin(GL_LINES);
+  glColor3d(1, 0, 0);
+  glVertex2d(0.2, 0.1);
+  glVertex2d(0.8, 0.5);
+  glEnd();
+
+  // Куб.
+  glBegin(GL_QUADS);  
+  glColor3f(1.0, 1.0, 1.0);
+  for (auto Coord : Vertices) {
+    glVertex3fv(Coord);
+  }        
+  glEnd();
+  
+  // Окончание кадра.
+  glFinish();
+
 }
 
 int main()
