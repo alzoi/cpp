@@ -1,5 +1,5 @@
 # Пример использования OpenGL в библиотеке SFML
-Ссылки:
+Ссылки:  
 https://www.sfml-dev.org/tutorials/2.5/window-opengl.php  
 
 Установка:
