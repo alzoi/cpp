@@ -18,3 +18,4 @@ wine win_app.exe
 ## Графические библиотеки
 [SFML](https://www.sfml-dev.org/)  
 [SDL](https://www.libsdl.org/)  
+[GLFW](https://www.glfw.org/)  
