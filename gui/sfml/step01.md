@@ -1,4 +1,7 @@
 # Пример использования OpenGL в библиотеке SFML
+Ссылки:
+https://www.sfml-dev.org/tutorials/2.5/window-opengl.php  
+
 Установка:
 ```
 sudo apt-get install libsfml-dev
@@ -12,6 +15,25 @@ g++ opengl.cpp -o sfml_app -lsfml-graphics -lsfml-window -lsfml-system -lGL
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
+
+// vertices to render
+GLfloat Vertices[4][3] = {
+    {-0.5f, 0.5f, 0.0f},  // top left
+    {0.5f, 0.5f, 0.0f},   // top right
+    {0.5f, -0.5f, 0.0f},  // bottom right
+    {-0.5f, -0.5f, 0.0f}, // bottom left
+};
+
+// render routine
+void do_render() {
+  glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+  glClear(GL_COLOR_BUFFER_BIT);
+  glBegin(GL_QUADS);
+  glColor3f(1.0, 1.0, 1.0);
+  for (auto Coord : Vertices)
+    glVertex3fv(Coord);
+  glEnd();
+}
 
 int main()
 {
@@ -48,6 +70,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // draw...
+        do_render();
 
         // end the current frame (internally swaps the front and back buffers)
         window.display();
