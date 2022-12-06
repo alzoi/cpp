@@ -61,8 +61,22 @@ void do_render() {
 
 int main()
 {
+    sf::ContextSettings ls_settings;
+
+    ls_settings.depthBits         = 24;
+    ls_settings.stencilBits       = 8;
+    ls_settings.antialiasingLevel = 4;
+    ls_settings.majorVersion      = 3;
+    ls_settings.minorVersion      = 1;
+    
     // create the window
-    sf::Window window(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, sf::ContextSettings(32));
+    sf::Window window(
+        sf::VideoMode(800, 600),
+        "OpenGL",
+        sf::Style::Default,
+        ls_settings
+    );
+    
     window.setVerticalSyncEnabled(true);
 
     // activate the window
