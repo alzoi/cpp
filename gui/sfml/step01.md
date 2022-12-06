@@ -17,14 +17,6 @@ main.cpp
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 
-// Координаты вершин куба (vertices to render)
-GLfloat Vertices[4][3] = {
-    {-0.5f, 0.5f, 0.0f},  // top left
-    {0.5f, 0.5f, 0.0f},   // top right
-    {0.5f, -0.5f, 0.0f},  // bottom right
-    {-0.5f, -0.5f, 0.0f}, // bottom left
-};
-
 // render routine
 void do_render() {
 
@@ -46,7 +38,15 @@ void do_render() {
   glVertex2d(0.8, 0.5);
   glEnd();
 
-  // Куб.
+  // Координаты четырёхугольника (vertices to render)
+  GLfloat Vertices[4][3] = {
+    {-0.5f,  0.5f, 0.0f}, // top left
+    { 0.5f,  0.5f, 0.0f}, // top right
+    { 0.5f, -0.5f, 0.0f}, // bottom right
+    {-0.5f, -0.5f, 0.0f}, // bottom left
+  };
+
+  // Задание на отрисовку четырёхугольника.
   glBegin(GL_QUADS);  
   glColor3f(1.0, 1.0, 1.0);
   for (auto Coord : Vertices) {
@@ -54,7 +54,7 @@ void do_render() {
   }        
   glEnd();
   
-  // Окончание кадра.
+  // Ждём завершения отрисовки кадра.
   glFinish();
 
 }
