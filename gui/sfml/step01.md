@@ -11,7 +11,7 @@ sudo apt-get install libsfml-dev
 g++ opengl.cpp -o sfml_app -lsfml-graphics -lsfml-window -lsfml-system -lGL
 ```
 
-```с++
+```cpp
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
