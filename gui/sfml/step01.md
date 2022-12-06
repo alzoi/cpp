@@ -16,7 +16,7 @@ g++ opengl.cpp -o sfml_app -lsfml-graphics -lsfml-window -lsfml-system -lGL
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 
-// vertices to render
+// Координаты вершин куба (vertices to render)
 GLfloat Vertices[4][3] = {
     {-0.5f, 0.5f, 0.0f},  // top left
     {0.5f, 0.5f, 0.0f},   // top right
