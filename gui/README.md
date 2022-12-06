@@ -10,7 +10,8 @@
 [Wine - программное обеспечение, позволяющее запускать Windows приложения в Linux ОС](https://www.winehq.org/)  
 [Разработка UI системы](https://habr.com/ru/post/521306/)  
 [CS332. Компьютерная графика](https://edu.mmcs.sfedu.ru/course/view.php?id=188)  
-[Курс Компьютерная графика | Виталий Галинский ](https://www.youtube.com/watch?v=J6uINtQW7Ho&list=PL-_cKNuVAYAVK2E--20nqggd57jcipCk6)  
+[Курс Компьютерная графика 2018 | Виталий Галинский ](https://www.youtube.com/watch?v=J6uINtQW7Ho&list=PL-_cKNuVAYAVK2E--20nqggd57jcipCk6)  
+[Лекции к курсу Компьютерная графика 2018](https://www.school30.spb.ru/cgsg/cgc2018/)  
 ```cmd
 wine win_app.exe
 ```
