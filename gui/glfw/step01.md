@@ -67,7 +67,7 @@ int main(void) {
     GLFWwindow* lo_window;
 
     // Создать окно и связанный с ним контекст OpenGL.
-    lo_window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    lo_window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
     if (!lo_window) {
         glfwTerminate();
         return -1;
