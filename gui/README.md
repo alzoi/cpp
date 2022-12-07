@@ -20,7 +20,7 @@ wine win_app.exe
 [GLUT/freeglut](https://www.opengl.org/resources/libraries/glut/) история, [пример](http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/)  
 [SDL](https://www.libsdl.org/)  
 [SFML](https://www.sfml-dev.org/) стабильная  
-[GLFW](https://www.glfw.org/) наиболее проработанная  
+[GLFW](https://www.glfw.org/) наиболее проработанная, [пример](https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/2.1.hello_triangle/hello_triangle.cpp)  
 
 ## OpenGL
 [learnopengl.com](https://learnopengl.com/Getting-started/Hello-Window)  
