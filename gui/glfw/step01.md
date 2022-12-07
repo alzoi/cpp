@@ -13,7 +13,7 @@ make
 make install
 ```
 
-## Программа glfw_main.cpp
+## Программа glfw_step01.cpp
 ```cpp
 #include <GLFW/glfw3.h>
 
@@ -99,10 +99,10 @@ int main(void)
 
 ## Компиляция программы
 ```
-g++ glfw_main.cpp -o glfw_main -std=c++17 -Wall -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr \
+g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr \
 -lpthread -lXi -ldl -lXinerama -lXcursor
 ```
 Или более компактный вариант
 ```
-g++ glfw_main.cpp -o glfw_main -std=c++17 -Wall -lGL -lglfw3 -lpthread -ldl
+g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lpthread -ldl
 ```
