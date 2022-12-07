@@ -11,7 +11,7 @@ cd glfw
 cmake -S . -B build
 cd build
 make
-make install
+sudo make install
 ```
 Проверка версии OpenGL
 ```
