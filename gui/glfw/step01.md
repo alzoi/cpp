@@ -1,4 +1,4 @@
-# Библиотека GLFW
+# Библиотека GLFW и OpenGL
 
 ## Установка библиотеки
 https://www.glfw.org/docs/latest/compile_guide.html  
