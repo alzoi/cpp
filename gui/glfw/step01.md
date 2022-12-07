@@ -98,4 +98,6 @@ int main(void)
 ```
 
 ## Компиляция программы
+```
 g++ glfw_main.cpp -o glfw_main -std=c++17 -Wall -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -ldl -lXinerama -lXcursor
+```
