@@ -22,4 +22,5 @@ wine win_app.exe
 [SFML](https://www.sfml-dev.org/) стабильная  
 [GLFW](https://www.glfw.org/) наиболее проработанная  
 
-
+## OpenGL
+[learnopengl.com](https://learnopengl.com/Getting-started/Hello-Window)  
