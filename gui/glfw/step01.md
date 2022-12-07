@@ -17,7 +17,8 @@ make install
 ```cpp
 #include <GLFW/glfw3.h>
 
-void do_render() {
+void render_openGL() {
+  // Функция отрисовки сцены функциями OpenGL.
   
   // Цвет фона.
   glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -61,32 +62,33 @@ void do_render() {
 
 int main(void) {
     
-    GLFWwindow* window;
-
     if (!glfwInit()) return -1;
 
+    GLFWwindow* lo_window;
+
     // Создать окно и связанный с ним контекст OpenGL.
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if (!window) {
+    lo_window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!lo_window) {
         glfwTerminate();
         return -1;
     }
 
-    // Установить контекст указанного окна window текущим для вызывающего потока.
-    glfwMakeContextCurrent(window);
+    // Установить контекст указанного окна lo_window текущим для вызывающего потока.
+    glfwMakeContextCurrent(lo_window);
 
     // Цикл, пока пользователь не закроет окно
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(lo_window)) {
         
-        do_render();
+        render_openGL();
 
         // Поменять местами передний и задний буферы указанного окна.
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(lo_window);
 
         // Обработать события, которые находятся в очереди событий, затем вернуться в точку вызова.
         glfwPollEvents();
     }
-
+    
+    // Удалить все оставшиеся окна и курсоры.
     glfwTerminate();
     
     return 0;
