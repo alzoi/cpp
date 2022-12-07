@@ -64,8 +64,6 @@ int main(void) {
     
     if (!glfwInit()) return -1;
 
-    GLFWwindow* lo_window;
-
     glfwWindowHint(GLFW_DEPTH_BITS, 24);
     glfwWindowHint(GLFW_STENCIL_BITS, 8);
     glfwWindowHint(GLFW_SAMPLES, 4);
@@ -73,7 +71,7 @@ int main(void) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
 
     // Создать окно и связанный с ним контекст OpenGL.
-    lo_window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
+    GLFWwindow* lo_window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
     if (!lo_window) {
         glfwTerminate();
         return -1;
