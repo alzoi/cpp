@@ -12,6 +12,12 @@ cd build
 make
 make install
 ```
+Проверка версии OpenGL
+```
+sudo apt-get install mesa-utils
+glxinfo | grep "OpenGL version"
+```
+
 
 ## Программа glfw_step01.cpp
 ```cpp
