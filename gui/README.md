@@ -16,7 +16,7 @@
 wine win_app.exe
 ```
 
-## Графические библиотеки для управления и окон
+## Графические библиотеки для управления и окон ОС
 [GLUT/freeglut](https://www.opengl.org/resources/libraries/glut/)  
 [SDL](https://www.libsdl.org/)  
 [SFML](https://www.sfml-dev.org/)  
