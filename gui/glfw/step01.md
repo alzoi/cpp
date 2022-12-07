@@ -3,6 +3,7 @@
 ## Установка библиотеки
 https://www.glfw.org/docs/latest/compile_guide.html  
 ```
+sudo apt-get update
 sudo apt install xorg-dev
 cd ~
 git clone https://github.com/glfw/glfw.git
