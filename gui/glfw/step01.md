@@ -18,11 +18,12 @@ make install
 #include <GLFW/glfw3.h>
 
 void do_render() {
-
+  
+  // Цвет фона.
   glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
   
-  // Очистка кадра.
-  glClear(GL_COLOR_BUFFER_BIT);
+  // Очистка буфера вывода установленным цветом.
+  glClear(GL_COLOR_BUFFER_BIT);  
 
   // Точка
   glBegin(GL_POINTS);
@@ -58,41 +59,36 @@ void do_render() {
 
 }
 
-int main(void)
-{
+int main(void) {
+    
     GLFWwindow* window;
 
-    /* Initialize the library */
-    if (!glfwInit())
-        return -1;
+    if (!glfwInit()) return -1;
 
-    /* Create a windowed mode window and its OpenGL context */
+    // Создать окно и связанный с ним контекст OpenGL.
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if (!window)
-    {
+    if (!window) {
         glfwTerminate();
         return -1;
     }
 
-    /* Make the window's context current */
+    // Установить контекст указанного окна window текущим для вызывающего потока.
     glfwMakeContextCurrent(window);
 
-    /* Loop until the user closes the window */
-    while (!glfwWindowShouldClose(window))
-    {
-        /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
-
+    // Цикл, пока пользователь не закроет окно
+    while (!glfwWindowShouldClose(window)) {
+        
         do_render();
 
-        /* Swap front and back buffers */
+        // Поменять местами передний и задний буферы указанного окна.
         glfwSwapBuffers(window);
 
-        /* Poll for and process events */
+        // Обработать события, которые находятся в очереди событий, затем вернуться в точку вызова.
         glfwPollEvents();
     }
 
     glfwTerminate();
+    
     return 0;
 }
 ```
