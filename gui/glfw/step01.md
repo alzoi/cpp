@@ -37,7 +37,7 @@ void do_render() {
   glVertex2d(0.8, 0.5);
   glEnd();
 
-  // Координаты четырёхугольника (vertices to render)
+  // Четыре координаты четырёхугольника (vertices to render)
   GLfloat Vertices[4][3] = {
     {-0.1f,  0.1f, 0.0f}, // top left
     { 0.1f,  0.1f, 0.0f}, // top right
