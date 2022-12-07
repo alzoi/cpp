@@ -18,7 +18,13 @@ sudo make install
 sudo apt-get install mesa-utils
 glxinfo | grep "OpenGL version"
 ```
-
+Возможно потребуются версии
+```
+sudo apt-get install cmake pkg-config
+sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev
+sudo apt-get install libglew-dev libglfw3-dev libglm-dev
+sudo apt-get install libao-dev libmpg123-dev
+```
 
 ## Программа glfw_step01.cpp
 ```cpp
