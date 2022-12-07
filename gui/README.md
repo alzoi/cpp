@@ -17,7 +17,7 @@ wine win_app.exe
 ```
 
 ## Графические библиотеки для работы с оконной подсистемой ОС
-[GLUT/freeglut](https://www.opengl.org/resources/libraries/glut/) история  
+[GLUT/freeglut](https://www.opengl.org/resources/libraries/glut/) история, [пример](http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/)  
 [SDL](https://www.libsdl.org/)  
 [SFML](https://www.sfml-dev.org/) стабильная  
 [GLFW](https://www.glfw.org/) наиболее проработанная  
