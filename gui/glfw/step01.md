@@ -12,6 +12,7 @@ cmake -S . -B build
 cd build
 make
 sudo make install
+make clean
 ```
 Проверка версии OpenGL
 ```
