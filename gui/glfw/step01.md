@@ -31,7 +31,7 @@ sudo apt-get install libao-dev libmpg123-dev
 ## Компиляция программы
 ```
 g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr \
--lpthread -lXi -ldl -lXinerama -lXcursor
+-lpthread -lXi -ldl -lXinerama -lXcursor -lGLEW
 ```
 Или более компактный вариант
 ```
@@ -42,6 +42,7 @@ g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lpthread -ldl
 ```cpp
 #include <stdexcept>
 #include <iostream>
+
 #include <GLFW/glfw3.h>
 
 void render_openGL() {
@@ -103,7 +104,7 @@ void error_callback(int, const char *err_str) {
 }
 
 int main(void) try {
-  
+
   glfwSetErrorCallback(error_callback);
   
   glfwInit();
@@ -128,6 +129,12 @@ int main(void) try {
   glfwMakeContextCurrent(lo_window);
   glfwSetFramebufferSizeCallback(lo_window, framebuffer_size_callback);
 
+  // Определяем доступную версию OpenGL. 
+  GLint vers1, vers2;
+  glGetIntegerv(GL_MAJOR_VERSION, &vers1);
+  glGetIntegerv(GL_MINOR_VERSION, &vers2);
+  std::cout << "Данная видеокарта поддерживает версию OpenGL: " << vers1 << "." << vers2 << std::endl;
+  
   // Цикл, пока пользователь не закроет окно
   while (!glfwWindowShouldClose(lo_window)) {
       
