@@ -38,10 +38,12 @@ g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lpthread -ldl
 
 ## Программа glfw_step01.cpp
 ```cpp
+#include <stdexcept>
+#include <iostream>
 #include <GLFW/glfw3.h>
 
 void render_openGL() {
-  // Функция отрисовки сцены функциями OpenGL, сцена создаётся во внеэкранном буфере (невидимый задний буфер).
+// Функция отрисовки сцены функциями OpenGL, сцена создаётся во внеэкранном буфере (невидимый задний буфер).
   
   // Цвет фона.
   glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -83,43 +85,69 @@ void render_openGL() {
 
 }
 
-int main(void) {
-    
-    if (!glfwInit()) return -1;
+struct glfw_error : public std::runtime_error {
+// Класс для обработки ошибок.
+  glfw_error(const char *s) : std::runtime_error(s) {}
+};
 
-    glfwWindowHint(GLFW_DEPTH_BITS, 24);
-    glfwWindowHint(GLFW_STENCIL_BITS, 8);
-    glfwWindowHint(GLFW_SAMPLES, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_ANY_PROFILE);
-    //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Профиль для OpenGL >=3.2 
+void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
+// Область просмотра подстраивать под размеры окна.
+  glViewport(0, 0, width, height);
+}
 
-    // Создать окно и связанный с ним контекст OpenGL.
-    GLFWwindow* lo_window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
-    if (!lo_window) {
-        glfwTerminate();
-        return -1;
-    }
+void error_callback(int, const char *err_str) {
+// Выбросить ошибку.
+  throw glfw_error(err_str);
+}
 
-    // Установить контекст указанного окна lo_window текущим для вызывающего потока.
-    glfwMakeContextCurrent(lo_window);
+int main(void) try {
+  
+  glfwSetErrorCallback(error_callback);
+  
+  glfwInit();
+  // if (!glfwInit()) return -1;
+  
+  glfwWindowHint(GLFW_DEPTH_BITS, 24);
+  glfwWindowHint(GLFW_STENCIL_BITS, 8);
+  glfwWindowHint(GLFW_SAMPLES, 4);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_ANY_PROFILE);
+  //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Профиль для OpenGL >=3.2 
 
-    // Цикл, пока пользователь не закроет окно
-    while (!glfwWindowShouldClose(lo_window)) {
-        
-        render_openGL();
+  // Создать окно и связанный с ним контекст OpenGL.
+  GLFWwindow* lo_window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
+  if (!lo_window) {
+      glfwTerminate();
+      return -1;
+  }
 
-        // Скопировать данные заднего буфера на экранный буфер (видимый пользователю передний буфер).
-        glfwSwapBuffers(lo_window);
+  // Установить контекст указанного окна lo_window текущим для вызывающего потока.
+  glfwMakeContextCurrent(lo_window);
+  glfwSetFramebufferSizeCallback(lo_window, framebuffer_size_callback);
 
-        // Обработать события, которые находятся в очереди событий, затем вернуться в точку вызова.
-        glfwPollEvents();
-    }
-    
-    // Удалить все оставшиеся окна и курсоры.
-    glfwTerminate();
-    
-    return 0;
+  // Цикл, пока пользователь не закроет окно
+  while (!glfwWindowShouldClose(lo_window)) {
+      
+      render_openGL();
+
+      // Скопировать данные заднего буфера на экранный буфер (видимый пользователю передний буфер).
+      glfwSwapBuffers(lo_window);
+
+      // Обработать события, которые находятся в очереди событий, затем вернуться в точку вызова.
+      glfwPollEvents();
+  }
+  
+  // Удалить все оставшиеся окна и курсоры.
+  glfwTerminate();
+  
+  return 0;
+
+} catch (glfw_error &E) {
+  std::cout << "GLFW error: " << E.what() << std::endl;
+} catch (std::exception &E) {
+  std::cout << "Standard error: " << E.what() << std::endl;
+} catch (...) {
+  std::cout << "Unknown error\n";
 }
 ```
