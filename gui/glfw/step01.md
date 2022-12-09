@@ -26,6 +26,16 @@ sudo apt-get install libglew-dev libglfw3-dev libglm-dev
 sudo apt-get install libao-dev libmpg123-dev
 ```
 
+## Компиляция программы
+```
+g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr \
+-lpthread -lXi -ldl -lXinerama -lXcursor
+```
+Или более компактный вариант
+```
+g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lpthread -ldl
+```
+
 ## Программа glfw_step01.cpp
 ```cpp
 #include <GLFW/glfw3.h>
@@ -112,14 +122,4 @@ int main(void) {
     
     return 0;
 }
-```
-
-## Компиляция программы
-```
-g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr \
--lpthread -lXi -ldl -lXinerama -lXcursor
-```
-Или более компактный вариант
-```
-g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lpthread -ldl
 ```
