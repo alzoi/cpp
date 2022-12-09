@@ -2,6 +2,7 @@
 
 ## Установка библиотеки
 https://www.glfw.org/docs/latest/compile_guide.html  
+(Библиотека GLEW для определения, какие расширения OpenGL поддерживаются на целевой платформе)[https://github.com/nigels-com/glew#linux-and-mac]  
 ```
 sudo apt-get update
 sudo apt install xorg-dev
