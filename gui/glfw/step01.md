@@ -15,10 +15,11 @@ make
 sudo make install
 make clean
 ```
-Проверка версии OpenGL
+Определение версии OpenGL и данных видеокарты
 ```
 sudo apt-get install mesa-utils
 glxinfo | grep "OpenGL version"
+lspci -v | grep --color -E '(VGA|3D)'
 ```
 Возможно потребуются версии
 ```
