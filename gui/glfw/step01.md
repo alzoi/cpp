@@ -15,7 +15,7 @@ make
 sudo make install
 make clean
 ```
-Определение версии OpenGL и данных видеокарты (mesa)[https://wiki.debian.org/ru/Mesa]
+Определение версии OpenGL и данных видеокарты [mesa](https://wiki.debian.org/ru/Mesa)
 ```
 sudo apt-get install mesa-utils
 glxinfo | grep "OpenGL version"
