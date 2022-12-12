@@ -89,6 +89,26 @@ void render_openGL() {
 
 }
 
+void render_openGL2() {
+// Функция отрисовки сцены функциями OpenGL, сцена создаётся во внеэкранном буфере (невидимый задний буфер).
+  
+  // Цвет фона.
+  glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+  
+  // Очистка буфера вывода установленным цветом.
+  glClear(GL_COLOR_BUFFER_BIT);  
+
+  // Отрезок.
+  glBegin(GL_LINES);
+  glColor3d(0, 1, 0);
+  glVertex2d(0.1, 0.7);
+  glVertex2d(0.7, 0.1);
+  glEnd();
+
+  glFinish();
+
+}
+
 struct glfw_error : public std::runtime_error {
 // Класс для обработки ошибок.
   glfw_error(const char *s) : std::runtime_error(s) {}
@@ -120,15 +140,19 @@ int main(void) try {
   //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Профиль для OpenGL >=3.2 
 
   // Создать окно и связанный с ним контекст OpenGL.
-  GLFWwindow* lo_window = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
-  if (!lo_window) {
+  GLFWwindow* lo_window1 = glfwCreateWindow(800, 600, "Hello World", NULL, NULL);
+  if (!lo_window1) {
       glfwTerminate();
       return -1;
   }
 
-  // Установить контекст указанного окна lo_window текущим для вызывающего потока.
-  glfwMakeContextCurrent(lo_window);
-  glfwSetFramebufferSizeCallback(lo_window, framebuffer_size_callback);
+  GLFWwindow* lo_window2 = glfwCreateWindow(400, 300, "Dialog", NULL, NULL);
+  if (!lo_window2) {
+      glfwTerminate();
+      return -1;
+  }
+
+  glfwSetFramebufferSizeCallback(lo_window1, framebuffer_size_callback);
 
   // Определяем доступную версию OpenGL. 
   GLint vers1, vers2;
@@ -137,12 +161,20 @@ int main(void) try {
   std::cout << "Данная видеокарта поддерживает версию OpenGL: " << vers1 << "." << vers2 << std::endl;
   
   // Цикл, пока пользователь не закроет окно
-  while (!glfwWindowShouldClose(lo_window)) {
+  while (!glfwWindowShouldClose(lo_window1) && !glfwWindowShouldClose(lo_window2)) {
       
+      // Установить контекст указанного окна lo_window1 текущим для вызывающего потока.
+      // Если окно единственное, то функцию можно вызвать перед циклом.
+      glfwMakeContextCurrent(lo_window1);
       render_openGL();
-
       // Скопировать данные заднего буфера на экранный буфер (видимый пользователю передний буфер).
-      glfwSwapBuffers(lo_window);
+      glfwSwapBuffers(lo_window1);
+
+      // Выводить OpenGL графику в окно lo_window2.
+      glfwMakeContextCurrent(lo_window2);
+      render_openGL2();
+      // Скопировать данные заднего буфера на экранный буфер (видимый пользователю передний буфер).
+      glfwSwapBuffers(lo_window2);
 
       // Обработать события, которые находятся в очереди событий, затем вернуться в точку вызова.
       glfwPollEvents();
