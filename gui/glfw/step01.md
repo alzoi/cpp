@@ -17,7 +17,7 @@ sudo make install
 make clean
 ```
 ## Установка библиотеки GLEW
-Библиотека [GLEW](https://glew.sourceforge.net/) для определения и загрузки функций OpenGL на целевой платформе.
+Библиотека [GLEW](https://glew.sourceforge.net/) для определения и загрузки функций OpenGL на целевой платформе.  
 Скачиваем библиотеку [GLEW](https://sourceforge.net/projects/glew/files/latest/download), распаковываем архив, переходим в папку из архива.  
 Выполняем команды установки
 ```
