@@ -1,4 +1,6 @@
 # Библиотека GLFW и OpenGL
+## Ссылки
+https://habr.com/ru/post/505726/
 
 ## Установка библиотеки
 https://www.glfw.org/docs/latest/compile_guide.html  
