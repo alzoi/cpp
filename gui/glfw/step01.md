@@ -174,6 +174,10 @@ int main(void) try {
   glGetIntegerv(GL_MINOR_VERSION, &vers2);
   std::cout << "Данная видеокарта поддерживает версию OpenGL: " << vers1 << "." << vers2 << std::endl;
   
+  // Ждём указанное число обновлений развёртки экрана,
+  // затем копируем данных с заднего буфера в окно экрана.
+  glfwSwapInterval(30);
+  
   // Цикл, пока пользователь не закроет окно
   while (!glfwWindowShouldClose(lo_window1) && !glfwWindowShouldClose(lo_window2)) {
       
@@ -192,6 +196,8 @@ int main(void) try {
 
       // Обработать события, которые находятся в очереди событий, затем вернуться в точку вызова.
       glfwPollEvents();
+      
+      std::cout << "1" << std::flush;
   }
   
   // Удалить все оставшиеся окна и курсоры.
