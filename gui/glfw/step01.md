@@ -2,7 +2,7 @@
 ## Ссылки
 https://habr.com/ru/post/505726/
 
-## Установка библиотеки
+## Установка библиотеки GLFW
 https://www.glfw.org/docs/latest/compile_guide.html  
 ```
 sudo apt-get update
