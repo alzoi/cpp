@@ -15,7 +15,8 @@ make
 sudo make install
 make clean
 ```
-Определение версии OpenGL и данных видеокарты [mesa](https://wiki.debian.org/ru/Mesa)
+Определение версии OpenGL и данных видеокарты [mesa](https://wiki.debian.org/ru/Mesa)  
+Mesa - это реализация OpenGL в Linux. Наша точка входа - libGL, просто динамическая библиотека, позволяющая нам взаимодействовать со средой выполнения OpenGL.
 ```
 sudo apt-get install mesa-utils
 glxinfo | grep "OpenGL version"
