@@ -4,7 +4,6 @@ https://habr.com/ru/post/505726/
 
 ## Установка библиотеки
 https://www.glfw.org/docs/latest/compile_guide.html  
-Библиотека [GLEW](https://github.com/nigels-com/glew) для определения и загрузки расширений OpenGL для целевой платформы.
 ```
 sudo apt-get update
 sudo apt install xorg-dev
@@ -17,6 +16,18 @@ make
 sudo make install
 make clean
 ```
+## Установка библиотеки GLEW
+Библиотека [GLEW](https://glew.sourceforge.net/) для определения и загрузки функций OpenGL на целевой платформе.
+Скачиваем библиотеку [GLEW](https://sourceforge.net/projects/glew/files/latest/download), распаковываем архив, переходим в папку из архива.  
+Выполняем команды установки
+```
+sudo apt-get install build-essential libxmu-dev libxi-dev libgl-dev
+make
+sudo make install
+make clean
+```
+
+## Библиотека mese
 Определение версии OpenGL и данных видеокарты [mesa](https://wiki.debian.org/ru/Mesa)  
 Mesa - это реализация OpenGL в Linux. Наша точка входа - libGL, просто динамическая библиотека, позволяющая нам взаимодействовать со средой выполнения OpenGL.
 ```
