@@ -22,7 +22,7 @@ sudo apt-get install mesa-utils
 glxinfo | grep "OpenGL version"
 lspci -v | grep --color -E '(VGA|3D)'
 ```
-Возможно потребуются версии
+Возможно потребуются следующие пакеты
 ```
 sudo apt-get install cmake pkg-config
 sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev
