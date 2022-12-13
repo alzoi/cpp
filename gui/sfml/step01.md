@@ -1,6 +1,7 @@
 # Пример использования OpenGL в библиотеке SFML
 Ссылки:  
 https://www.sfml-dev.org/tutorials/2.5/window-opengl.php  
+[youtube.com/OnigiriScience](https://www.youtube.com/watch?v=TTqLX0OHZzI&list=PLyc_E1fmJGpLjpv4tQ6s67m-zx5sxZkbM&index=1)  
 
 Установка:
 ```
