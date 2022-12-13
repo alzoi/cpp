@@ -34,8 +34,8 @@ sudo apt-get install libao-dev libmpg123-dev
 
 ## Компиляция программы
 ```
-g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr \
--lpthread -lXi -ldl -lXinerama -lXcursor -lGLEW
+g++ glfw_step01.cpp -o glfw_step01 -std=c++17 -Wall -lGL -lGLEW -lglfw3 -lX11 -lXxf86vm -lXrandr \
+-lpthread -lXi -ldl -lXinerama -lXcursor
 ```
 Или более компактный вариант
 ```
