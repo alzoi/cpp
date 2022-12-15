@@ -95,7 +95,12 @@ int main(void) {
 
 ## Makefile
 ```
-all:
+./bin/st1.exe: ./src/step1.cpp
 	g++ ./src/step1.cpp ./src/glad.c -o ./bin/st1.exe --std=c++17 -I./include -L./lib -lglfw3dll
 ```
 В папке /bin/ необходимо поместить библиотечный файл glfw3.dll. 
+
+## Компиляция
+```
+mingw32-make
+```
