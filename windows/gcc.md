@@ -9,4 +9,8 @@ pacman -Syu
 pacman -Su
 pacman -S --needed base-devel mingw-w64-x86_64-toolchain
 ```
-В переменные окружения добавляем C:\msys64\mingw64\bin
+В переменные окружения добавляем:
+```
+C:\msys64\mingw64\bin
+C:\msys64\usr\bin
+```
