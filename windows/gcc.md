@@ -6,7 +6,6 @@ https://github.com/msys2/msys2-installer/releases/download/2022-06-03/msys2-x86_
 После установки, в окне msys2 даём команды для установки библиотек и инструментов:
 ```
 pacman -Syu
-pacman -Su
 pacman -S --needed base-devel mingw-w64-x86_64-toolchain
 ```
 В переменные окружения добавляем:
