@@ -32,3 +32,6 @@ https://paroj.github.io/gltut/
 
 ## Установка драйверов
 https://wiki.debian.org/ATIProprietary  
+
+## Средство просмотра аппаратных возможностей OpenGL
+https://www.saschawillems.de/creations/opengl-hardware-capability-viewer/ 
