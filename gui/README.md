@@ -29,3 +29,6 @@ wine win_app.exe
 https://paroj.github.io/gltut/  
 [learnopengl.com](https://learnopengl.com/Getting-started/Hello-Window)  
 [opengl-tutorial.org](http://www.opengl-tutorial.org/ru/beginners-tutorials/tutorial-2-the-first-triangle/)  
+
+## Установка драйверов
+https://wiki.debian.org/ATIProprietary  
