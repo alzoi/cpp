@@ -11,7 +11,8 @@ https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/1.2.hello_
 include
 lib-mingw-w64
 ```
-вставляем их в директорию собственного проекта /my_prj/, папку /lib-mingw-w64/ переименовываем в /lib/.
+вставляем их в директорию собственного проекта /my_prj/, папку /lib-mingw-w64/ переименовываем в /lib/.  
+В папку /bin/ необходимо поместить библиотечный файл glfw3.dll. 
 
 ## Установка GLAD
 На сайте https://glad.dav1d.de/ генерируем загрузчик OpenGL, указываем версию, в Profile указываем Core.  
@@ -98,7 +99,6 @@ int main(void) {
 ./bin/st1.exe: ./src/step1.cpp
 	g++ ./src/step1.cpp ./src/glad.c -o ./bin/st1.exe --std=c++17 -I./include -L./lib -lglfw3dll
 ```
-В папке /bin/ необходимо поместить библиотечный файл glfw3.dll. 
 
 ## Компиляция
 ```
