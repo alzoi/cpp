@@ -3,6 +3,7 @@
 https://hackingcpp.com/  
 
 # Курсы по C++
+[C++ Programming Course - Beginner to Advanced](https://www.youtube.com/watch?v=8jLOx1hD3_o)  
 https://compscicenter.ru/courses/cpp-1/  
 https://compscicenter.ru/courses/cpp-2/
 
