@@ -26,7 +26,7 @@ lib-mingw-w64
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include <windows.h> // Для работы с функцией GetTickCount
+//#include <windows.h> // Для работы с функцией GetTickCount
 
 static void error_callback(int error, const char* description) {
     fputs(description, stderr);
@@ -55,16 +55,40 @@ int main(void) {
         return -1;
     }
     
-    char newTitle[128];
+    //char newTitle[128];
     
-    glfwSwapInterval(30);
+    glfwSwapInterval(1);
+    
+    double prevTime = 0.0;
+    double crntTime = 0.0;
+    double timeDiff;
+    unsigned int counter = 0;
     
     glfwSetKeyCallback(window, key_callback);
     while (!glfwWindowShouldClose(window)) {
         
 	// В заголовок окна выводим количество миллисекунд с момента включения ПК.
-      	snprintf(newTitle, sizeof(newTitle), "%lu", GetTickCount());
-      	glfwSetWindowTitle(window, newTitle);
+      	//snprintf(newTitle, sizeof(newTitle), "%lu", GetTickCount());
+      	//glfwSetWindowTitle(window, newTitle);
+	
+	// Считаем интервал времени на отрисовку одного кадра.
+        crntTime = glfwGetTime();
+	timeDiff = crntTime - prevTime;
+        // Счётчик кадров.
+	counter++;
+        
+        // Обновляем заголовок через каждые 10 отрисовок кадра.
+	if (timeDiff >= 1.0 / 10.0) {
+
+	  std::string FPS      = std::to_string((1.0 / timeDiff) * counter);
+	  std::string ms       = std::to_string((timeDiff / counter) * 1000);
+	  std::string newTitle = "OpenGL - " + FPS + " FPS / " + ms + "ms";
+	  glfwSetWindowTitle(window, newTitle.c_str());
+
+	  prevTime = crntTime;
+	  counter = 0;
+
+	}
 	
         float ratio;
         int width, height;
