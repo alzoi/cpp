@@ -29,7 +29,10 @@ wine win_app.exe
 https://paroj.github.io/gltut/  
 [learnopengl.com](https://learnopengl.com/Getting-started/Hello-Window)  
 [opengl-tutorial.org](http://www.opengl-tutorial.org/ru/beginners-tutorials/tutorial-2-the-first-triangle/)  
-[Игровой цикл](https://dewitters.com/dewitters-gameloop/)  
+
+## Игровой цикл
+https://dewitters.com/dewitters-gameloop/  
+https://gafferongames.com/post/fix_your_timestep/  
 
 ## Установка драйверов
 https://wiki.debian.org/ATIProprietary  
