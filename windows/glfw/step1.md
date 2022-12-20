@@ -26,6 +26,7 @@ lib-mingw-w64
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <windows.h> // Для работы с функцией GetTickCount
 
 static void error_callback(int error, const char* description) {
     fputs(description, stderr);
@@ -53,10 +54,18 @@ int main(void) {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-
+    
+    char newTitle[128];
+    
+    glfwSwapInterval(30);
+    
     glfwSetKeyCallback(window, key_callback);
     while (!glfwWindowShouldClose(window)) {
         
+	// В заголовок окна выводим количество миллисекунд с момента включения ПК.
+      	snprintf(newTitle, sizeof(newTitle), "%lu", GetTickCount());
+      	glfwSetWindowTitle(window, newTitle);
+	
         float ratio;
         int width, height;
         
