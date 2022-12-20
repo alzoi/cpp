@@ -33,7 +33,7 @@ https://paroj.github.io/gltut/
 ## Игровой цикл
 https://dewitters.com/dewitters-gameloop/  
 https://gafferongames.com/post/fix_your_timestep/  
-
+[codeproject.com/Articles/27219/TetroGL](https://www.codeproject.com/Articles/27219/TetroGL-An-OpenGL-Game-Tutorial-in-C-for-Win32-Pla)  
 ## Установка драйверов
 https://wiki.debian.org/ATIProprietary  
 
