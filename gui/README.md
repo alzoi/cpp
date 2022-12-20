@@ -30,7 +30,7 @@ https://paroj.github.io/gltut/
 [learnopengl.com](https://learnopengl.com/Getting-started/Hello-Window)  
 [opengl-tutorial.org](http://www.opengl-tutorial.org/ru/beginners-tutorials/tutorial-2-the-first-triangle/)  
 
-## Игровой цикл
+## Игровой цикл (цикл обработки сообщений)
 https://dewitters.com/dewitters-gameloop/  
 https://gafferongames.com/post/fix_your_timestep/  
 [codeproject.com/Articles/27219/TetroGL](https://www.codeproject.com/Articles/27219/TetroGL-An-OpenGL-Game-Tutorial-in-C-for-Win32-Pla)  
