@@ -26,15 +26,49 @@ lib-mingw-w64
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <thread>
 //#include <windows.h> // Для работы с функцией GetTickCount
 
 static void error_callback(int error, const char* description) {
     fputs(description, stderr);
 }
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GL_TRUE);
+    }
 }
+
+void do_render(GLFWwindow* window) {
+    float ratio;
+    int width, height;
+
+    glfwGetFramebufferSize(window, &width, &height);
+
+    ratio = width / (float) height;
+    glViewport(0, 0, width, height);
+
+    glClear(GL_COLOR_BUFFER_BIT);
+    glMatrixMode(GL_PROJECTION);
+
+    glLoadIdentity();
+    glOrtho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
+    glMatrixMode(GL_MODELVIEW);
+
+    glLoadIdentity();
+    glRotatef((float)glfwGetTime()*50.f, 0.f, 0.f, 1.f);
+
+    glBegin(GL_TRIANGLES);
+        glColor3f(1.f, 0.f, 0.f);
+        glVertex3f(-0.6f, -0.4f, 0.f);
+        glColor3f(0.f, 1.f, 0.f);
+        glVertex3f(0.6f, -0.4f, 0.f);
+        glColor3f(0.f, 0.f, 1.f);
+        glVertex3f(0.f, 0.6f, 0.f);
+    glEnd();
+
+    glfwSwapBuffers(window);
+}
+
 int main(void) {
     
     GLFWwindow* window;
@@ -61,68 +95,45 @@ int main(void) {
     
     double prevTime = 0.0;
     double crntTime = 0.0;
-    double timeDiff;
+    double timeDiff = 0.0;
     unsigned int counter = 0;
         
     glfwSetKeyCallback(window, key_callback);
-    glfwSetTime(0.0); // Сбросили счётчик времени.
+
+    glfwSetTime(0.0); // Сброс счётчика времени.
+
     while (!glfwWindowShouldClose(window)) {
         
-	// В заголовок окна выводим количество миллисекунд с момента включения ПК.
-      	//snprintf(newTitle, sizeof(newTitle), "%lu", GetTickCount());
-      	//glfwSetWindowTitle(window, newTitle);
-	
-	// Получаем число секунд, которые прошли с момента сброса счётчика времени.
-	// Результат получаем в секундах, например: 0,000.295.800 cекунд = 296 микросекунд = 295 800 наносекунд).
-        crntTime = glfwGetTime();
-	
-	// Считаем интервал времени на отрисовку одного кадра.
-	timeDiff = crntTime - prevTime;
-        // Счётчик кадров.
-	counter++;
-        
-        // Обновляем заголовок через пол секунды (0,5 с).
-	if (timeDiff >= 1.0 / 2.0) {
-
-	  std::string FPS      = std::to_string((1.0 / timeDiff) * counter);
-	  std::string ms       = std::to_string((timeDiff / counter) * 1000);
-	  std::string newTitle = "OpenGL - " + FPS + " FPS / " + ms + "ms";
-	  glfwSetWindowTitle(window, newTitle.c_str());
-
-	  prevTime = crntTime;
-	  counter = 0;
-
-	}
-	
-        float ratio;
-        int width, height;
-        
-        glfwGetFramebufferSize(window, &width, &height);
-        
-        ratio = width / (float) height;
-        glViewport(0, 0, width, height);
-        
-        glClear(GL_COLOR_BUFFER_BIT);
-        glMatrixMode(GL_PROJECTION);
-        
-        glLoadIdentity();
-        glOrtho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
-        glMatrixMode(GL_MODELVIEW);
-        
-        glLoadIdentity();
-        glRotatef((float)glfwGetTime()*50.f, 0.f, 0.f, 1.f);
-        
-        glBegin(GL_TRIANGLES);
-            glColor3f(1.f, 0.f, 0.f);
-            glVertex3f(-0.6f, -0.4f, 0.f);
-            glColor3f(0.f, 1.f, 0.f);
-            glVertex3f(0.6f, -0.4f, 0.f);
-            glColor3f(0.f, 0.f, 1.f);
-            glVertex3f(0.f, 0.6f, 0.f);
-        glEnd();
-        
-        glfwSwapBuffers(window);
         glfwPollEvents();
+        
+        do_render(window);
+
+        // Счётчик кадров.
+	    counter++;
+
+        // Получаем число секунд, которые прошли с момента сброса счётчика времени.
+        // Результат получаем в секундах, например: 0,000.295.800 cекунд = 296 микросекунд = 295 800 наносекунд).
+        crntTime = glfwGetTime();
+
+        // Считаем интервал времени на отрисовку одного кадра.
+        timeDiff = crntTime - prevTime;
+        
+        // Обновляем заголовок через одну секунду.
+        if (timeDiff >= 1.0 ) {
+
+            std::string FPS = std::to_string(counter);
+            std::string msF = std::to_string(timeDiff * 1000 / counter );
+
+            std::string newTitle = "OpenGL: " + FPS + " FPS (" + msF + " мс на кадр)";
+            glfwSetWindowTitle(window, newTitle.c_str());
+
+            prevTime = crntTime;
+            counter  = 0;
+        }
+
+        // В заголовок окна выводим количество миллисекунд с момента включения ПК.
+        //snprintf(newTitle, sizeof(newTitle), "%lu", GetTickCount());
+        //glfwSetWindowTitle(window, newTitle);
     }
     
     glfwDestroyWindow(window);
