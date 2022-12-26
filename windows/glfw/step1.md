@@ -77,8 +77,8 @@ int main(void) {
         // Счётчик кадров.
 	counter++;
         
-        // Обновляем заголовок через каждые 10 отрисовок кадра.
-	if (timeDiff >= 1.0 / 10.0) {
+        // Обновляем заголовок через пол секунды (0,5 с).
+	if (timeDiff >= 1.0 / 2.0) {
 
 	  std::string FPS      = std::to_string((1.0 / timeDiff) * counter);
 	  std::string ms       = std::to_string((timeDiff / counter) * 1000);
