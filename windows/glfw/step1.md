@@ -63,16 +63,20 @@ int main(void) {
     double crntTime = 0.0;
     double timeDiff;
     unsigned int counter = 0;
-    
+        
     glfwSetKeyCallback(window, key_callback);
+    glfwSetTime(0.0); // Сбросили счётчик времени.
     while (!glfwWindowShouldClose(window)) {
         
 	// В заголовок окна выводим количество миллисекунд с момента включения ПК.
       	//snprintf(newTitle, sizeof(newTitle), "%lu", GetTickCount());
       	//glfwSetWindowTitle(window, newTitle);
 	
-	// Считаем интервал времени на отрисовку одного кадра.
+	// Получаем число секунд, которые прошли с момента сброса счётчика времени.
+	// Результат получаем в секундах, например: 0,000.295.800 cекунд = 296 микросекунд = 295 800 наносекунд).
         crntTime = glfwGetTime();
+	
+	// Считаем интервал времени на отрисовку одного кадра.
 	timeDiff = crntTime - prevTime;
         // Счётчик кадров.
 	counter++;
