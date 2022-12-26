@@ -3,6 +3,7 @@
 ## Ссылка
 https://www.youtube.com/watch?v=hRInLNR9iRg  
 https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/1.2.hello_window_clear/hello_window_clear.cpp  
+[Настройка потока для GLFW](https://stackoverflow.com/questions/31328280/thread-setup-for-glfw/31621053#31621053)  
 
 ## Установка GLFW
 Скачиваем [Windows pre-compiled binaries](https://github.com/glfw/glfw/releases/download/3.3.8/glfw-3.3.8.bin.WIN64.zip)  
