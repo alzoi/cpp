@@ -106,8 +106,9 @@ int main(void) {
     while (!glfwWindowShouldClose(window)) {
         
         glfwPollEvents();
+        //glfwWaitEvents();
         
-        do_render(window);
+	do_render(window);
 
         // Счётчик кадров.
 	    counter++;
