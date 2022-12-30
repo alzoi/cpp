@@ -20,6 +20,7 @@ wine win_app.exe
 [Обзор современного графического стека Linux](https://bootlin.com/doc/training/graphics/graphics-slides.pdf)  
 
 ## Графические библиотеки для работы с оконной подсистемой ОС
+opengl.org/resources/libraries/  
 [GLUT/freeglut](https://www.opengl.org/resources/libraries/glut/) история, [пример](http://www.codebind.com/linux-tutorials/install-opengl-ubuntu-linux/)  
 [SDL](https://www.libsdl.org/)  
 [SFML](https://www.sfml-dev.org/) стабильная  
