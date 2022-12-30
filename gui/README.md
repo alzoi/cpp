@@ -27,7 +27,7 @@ opengl.org/resources/libraries/
 [GLFW](https://www.glfw.org/) наиболее проработанная, [пример](https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/2.1.hello_triangle/hello_triangle.cpp)  
 
 ## OpenGL
-https://paroj.github.io/gltut/  
+[https://paroj.github.io/gltut/](https://www.opengl.org/resources/libraries/)  
 [learnopengl.com](https://learnopengl.com/Getting-started/Hello-Window)  
 [opengl-tutorial.org](http://www.opengl-tutorial.org/ru/beginners-tutorials/tutorial-2-the-first-triangle/)  
 [Separate thread for rendering OpenGL](http://www.songho.ca/opengl/gl_mvc.html)  
