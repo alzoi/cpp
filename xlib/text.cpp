@@ -39,9 +39,9 @@ int main() {
     while(1) {
         XNextEvent(display, &event);
         switch(event.type) {
-            case Expose:
+            case Expose: // Событие - Необходимо перерисовать окно.
                 // Текст.
-                XSetForeground(display, gc, WhitePixel(display,screen_num));
+                XSetForeground(display, gc, WhitePixel(display, screen_num));
                 XDrawString(display, win, gc, 10, 10, hello,strlen(hello));
                 
                 // Красная линия.
