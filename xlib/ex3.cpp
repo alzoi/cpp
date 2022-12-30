@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <unistd.h>
 #include <stdio.h>
-#define NIL (0)
+#define NIL (0) // Адрес первого дисплея локальной машины.
 
 int main() {
   
@@ -54,6 +54,8 @@ int main() {
   
   char str[2];
   fgets(str, 2, stdin); 
+  
+  XCloseDisplay(NIL);
   
   return(0);
 
