@@ -20,6 +20,7 @@ wine win_app.exe
 [Обзор современного графического стека Linux](https://bootlin.com/doc/training/graphics/graphics-slides.pdf)  
 [Xlib/XCB/GLX/OpenGL](https://stackoverflow.com/questions/40543176/does-opengl-use-xlib-to-draw-windows-and-render-things-or-is-it-the-other-way-a)  
 [Рисование с помощью библиотеки Xlib](https://linuxgazette.net/issue78/tougher.html), [второй пример](https://halverscience.net/c_programming/c_graphics_xwindows/c_graphics_xwindows.html)  
+[Basic Graphics Programming With The Xlib Library - by Guy Keren](http://web.archive.org/web/20071018025425/http://users.actcom.co.il/~choo/lupg/tutorials/xlib-programming/xlib-programming.html)  
 [Графический стек Linux](https://www.baeldung.com/linux/gui)  
 
 Когда мы запускаем графическое приложение, оно загружает драйвер OpenGL — например, [Mesa](https://docs.mesa3d.org/). Драйвер, в свою очередь, загружает libdrm , что позволяет напрямую обращаться к ядру через ioctl.
