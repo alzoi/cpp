@@ -56,3 +56,8 @@ https://wiki.debian.org/ATIProprietary
 
 ## Средство просмотра аппаратных возможностей OpenGL
 https://www.saschawillems.de/creations/opengl-hardware-capability-viewer/ 
+
+## Библиотека GUI конмпонентов GTK
+https://gitlab.com/lockie/otus-gtk  
+https://www.youtube.com/watch?v=CNEJofOOPSY&t=894s  
+
