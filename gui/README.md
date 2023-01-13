@@ -61,3 +61,6 @@ https://www.saschawillems.de/creations/opengl-hardware-capability-viewer/
 https://gitlab.com/lockie/otus-gtk  
 https://www.youtube.com/watch?v=CNEJofOOPSY&t=894s  
 
+## Библиотека GUI конмпонентов wxWidgets
+[wxWidgets на Just Dev Tutorials](https://www.youtube.com/watch?v=MfuBS9n5_aY&list=PL0qQTroQZs5vVmTuBew-nTx9DIu6rRl2c)  
+
