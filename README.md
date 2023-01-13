@@ -6,6 +6,7 @@ https://hackingcpp.com/
 [C++ Programming Course - Beginner to Advanced](https://www.youtube.com/watch?v=8jLOx1hD3_o)  
 https://compscicenter.ru/courses/cpp-1/  
 https://compscicenter.ru/courses/cpp-2/
+[Modern C++ (2021 Lecture & Tutorials)](https://www.youtube.com/playlist?list=PLgnQpQtFTOGRv7VS6fYerEbT4ckBovKur)  
 
 # Полезные материалы
 https://github.com/ivafanas/cpp_shad_students  
