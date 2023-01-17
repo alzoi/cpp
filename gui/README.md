@@ -3,7 +3,7 @@
 ## Ссылки
 [WinAPI приложение для Windows](https://www.youtube.com/watch?v=TzuYeY_K02c)  
 [Windows Graphics Architecture](https://learn.microsoft.com/en-us/windows/win32/learnwin32/overview-of-the-windows-graphics-architecture)  
-[Создание простого приложения Direct2D](https://learn.microsoft.com/ru-ru/windows/win32/direct2d/direct2d-quickstart?source=recommendations)  
+[Создание простого приложения Windows Direct2D](https://learn.microsoft.com/ru-ru/windows/win32/direct2d/direct2d-quickstart?source=recommendations)  
 [GUI приложение на C++ с использованием библиотеки wxWidgets](https://www.youtube.com/watch?v=BjQhp0eHmJw&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G)  
 [Implement GUI in C++ Step by Step in VS 2017](https://www.youtube.com/watch?v=SC6VfQbrjtY&list=PLmeQIS8S5cYPFkpAk6x-aF0KEB0rfJb-K&index=3)  
 [Create Your First C++ Windows Form](https://www.youtube.com/watch?v=zv8DkkhBNR0)  
