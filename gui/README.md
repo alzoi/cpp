@@ -22,7 +22,7 @@
 wine win_app.exe
 ```
 ## GUI в операционной системе Windows
-[WinUI 3 — Новая эра разработки под Windows](https://habr.com/ru/post/546576/)  
+[WinUI 3 - Новая эра разработки под Windows](https://habr.com/ru/post/546576/)  
 
 ## Графический стек Linux
 [Обзор современного графического стека Linux](https://bootlin.com/doc/training/graphics/graphics-slides.pdf)  
