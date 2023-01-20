@@ -16,11 +16,15 @@
 [CS332. Компьютерная графика](https://edu.mmcs.sfedu.ru/course/view.php?id=188)  
 [Курс Компьютерная графика 2018 | Виталий Галинский ](https://www.youtube.com/watch?v=J6uINtQW7Ho&list=PL-_cKNuVAYAVK2E--20nqggd57jcipCk6)  
 [Лекции к курсу Компьютерная графика 2018](https://www.school30.spb.ru/cgsg/cgc2018/)  
+
+Запуск Windows приложения в Linux
 ```cmd
 wine win_app.exe
 ```
+## GUI в операционной системе Windows
+[WinUI 3 — Новая эра разработки под Windows](https://habr.com/ru/post/546576/)  
 
-## Графический стек
+## Графический стек Linux
 [Обзор современного графического стека Linux](https://bootlin.com/doc/training/graphics/graphics-slides.pdf)  
 [Xlib/XCB/GLX/OpenGL](https://stackoverflow.com/questions/40543176/does-opengl-use-xlib-to-draw-windows-and-render-things-or-is-it-the-other-way-a)  
 [Рисование с помощью библиотеки Xlib](https://linuxgazette.net/issue78/tougher.html), [второй пример](https://halverscience.net/c_programming/c_graphics_xwindows/c_graphics_xwindows.html)  
