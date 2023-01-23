@@ -17,6 +17,9 @@
 [Курс Компьютерная графика 2018 | Виталий Галинский ](https://www.youtube.com/watch?v=J6uINtQW7Ho&list=PL-_cKNuVAYAVK2E--20nqggd57jcipCk6)  
 [Лекции к курсу Компьютерная графика 2018](https://www.school30.spb.ru/cgsg/cgc2018/)  
 
+## Windows
+[Custom edit control win32](https://stackoverflow.com/questions/8074047/custom-edit-control-win32)  
+
 Запуск Windows приложения в Linux
 ```cmd
 wine win_app.exe
