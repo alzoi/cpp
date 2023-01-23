@@ -19,6 +19,7 @@
 
 ## Windows
 [Custom edit control win32](https://stackoverflow.com/questions/8074047/custom-edit-control-win32)  
+[Using Edit Controls](https://learn.microsoft.com/en-us/windows/win32/controls/using-edit-controls)  
 
 Запуск Windows приложения в Linux
 ```cmd
