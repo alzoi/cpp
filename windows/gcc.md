@@ -39,3 +39,7 @@ g++ --version
 
 Добавляем в системную переменную Path папку **C:\mingw64\bin\make-4.4\GccRel**
 Файл **gnumake.exe** можно переименовать в **make.exe**
+В сmd проверяем версию
+```
+make --version
+```
