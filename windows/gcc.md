@@ -64,6 +64,11 @@ app.exe: obj/main.o
 obj/main.o: main.c
 	gcc -std=c99 -D UNICODE -D _UNICODE -D _WIN32_IE=0x0500 -D WINVER=0x500 -Wall -c main.c -o obj/main.o
 ```
+Или короткий вариант компиляции
+```
+gcc main.c -o app.exe -s -mwindows -lgdi32 -luser32
+```
+
 Файл main.c
 ```c
 #ifndef UNICODE
