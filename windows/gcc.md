@@ -30,4 +30,12 @@ C:\msys64\usr\bin
 g++ --version
 ```
 
-С сайта https://www.gnu.org/software/make/#download скачиваем утилиту make.
+С сайта https://www.gnu.org/software/make/#download скачиваем исходники утилиты [make](https://ftp.gnu.org/gnu/make/make-4.4.tar.lz).
+Распаковываем исходники в папку C:\mingw64\bin\make-4.4
+В cmd из папки с исходниками make даём команду установки
+ ```
+ .\build_w32.bat gcc
+```
+
+Добавляем в системную переменную Path папку **C:\mingw64\bin\make-4.4\GccRel**
+Файл **gnumake.exe** можно переименовать в **make.exe**
