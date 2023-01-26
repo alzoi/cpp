@@ -22,3 +22,5 @@ C:\msys64\usr\bin
 
 Для 64-битной версии ОС выбираем [x86_64-12.2.0-release-win32-seh-ucrt-rt_v10-rev2.7z](https://github.com/niXman/mingw-builds-binaries/releases/download/12.2.0-rt_v10-rev2/x86_64-12.2.0-release-win32-seh-ucrt-rt_v10-rev2.7z)  
 Это компилятор без поддержки устаревших функций многопоточности С++11, обработкой исключений [seh](https://learn.microsoft.com/en-us/cpp/cpp/structured-exception-handling-c-cpp?view=msvc-170) (Structured Exception Handling, используется в Windows) и универсальной средой выполнения кода C [ucrt](https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c).
+
+Архив распаковываем в папку C:\mingw64\ и в системную переменную Path добавляем ссылку на папку C:\mingw64\bin
