@@ -37,7 +37,7 @@ g++ --version
  .\build_w32.bat gcc
 ```
 
-Добавляем в системную переменную Path папку **C:\mingw64\bin\make-4.4\GccRel**
+Добавляем в системную переменную Path папку **C:\mingw64\bin\make-4.4\GccRel**  
 Файл **gnumake.exe** можно переименовать в **make.exe**
 В сmd проверяем версию
 ```
