@@ -29,3 +29,5 @@ C:\msys64\usr\bin
 ```
 g++ --version
 ```
+
+С сайта https://www.gnu.org/software/make/#download скачиваем утилиту make.
