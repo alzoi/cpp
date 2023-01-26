@@ -24,3 +24,8 @@ C:\msys64\usr\bin
 Это компилятор без поддержки устаревших функций многопоточности С++11, обработкой исключений [seh](https://learn.microsoft.com/en-us/cpp/cpp/structured-exception-handling-c-cpp?view=msvc-170) (Structured Exception Handling, используется в Windows) и универсальной средой выполнения кода C [ucrt](https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c).
 
 Архив распаковываем в папку **C:\mingw64** и в системную переменную Path добавляем ссылку на папку **C:\mingw64\bin**
+
+Запускаем [cmd](https://learn.microsoft.com/ru-ru/windows-server/administration/windows-commands/cmd) и проверяем версию компилятора
+```
+g++ --version
+```
