@@ -92,7 +92,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     HWND hwnd = CreateWindowEx(
         0,                              // Optional window styles.
         CLASS_NAME,                     // Window class
-        L"Learn to Program Windows 世界你好!",    // Window text
+        L"Hello World, 世界你好!",    // Window text
         WS_OVERLAPPEDWINDOW,            // Window style
 
         // Size and position
