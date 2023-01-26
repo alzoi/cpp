@@ -1,3 +1,6 @@
+# Учебники
+https://github.com/yottaawesome/programming-windows-5th-edition
+
 # Установка компилятора на Windows
 
 ## msys2.org
