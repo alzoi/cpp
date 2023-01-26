@@ -47,6 +47,10 @@ make --version
 [GCC Command Options](https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html)  
 
 ## Hello World Win32
+Создаём папку для объектных файлов
+```
+mkdir obj
+```
 Файл Makefile
 ```make
 all: app.exe
