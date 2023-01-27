@@ -66,7 +66,7 @@ obj/main.o: main.c
 ```
 Или короткий вариант компиляции
 ```
-gcc main.c -o app.exe -s -lgdi32 -luser32 -lcomctl32 -mwindows
+gcc main.c -o app.exe -s -lkernel32 -luser32 -lgdi32 -lcomctl32 -mwindows
 ```
 
 Файл main.c
