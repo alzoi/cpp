@@ -36,7 +36,7 @@ int WINAPI wWinMain
   wc.lpszClassName = CLASS_NAME;
   wc.hIcon         = LoadIcon(NULL, IDI_APPLICATION);
   wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
-  wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH); // Цвет заливки фона.
+  //wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH); // Цвет заливки фона.
 
   RegisterClass(&wc);
 
@@ -72,6 +72,8 @@ int WINAPI wWinMain
 LRESULT CALLBACK WindowProc
 (HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
   
+  wchar_t str[40];
+
   switch (uMsg) {
     case WM_DESTROY:
       PostQuitMessage(0);
@@ -82,12 +84,15 @@ LRESULT CALLBACK WindowProc
       RECT rect;
 
       HDC hdc = BeginPaint(hwnd, &ps);
-        //FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW+1));
+        FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW+1));
         GetClientRect(hwnd, &rect);
-        DrawText(hdc, L"Привет, мир!", -1, &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+        DrawText(hdc, L"Win API, Uicode, gcc", -1, &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+        wsprintf(str, L"Привет, %s", L"мир!");
+        TextOut(hdc, 10, 10, str, wcslen(str));
       EndPaint(hwnd, &ps);
       return 0;
     }
   }
+  // Передаём сообщение обработчику по умолчанию.
   return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
