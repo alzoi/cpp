@@ -81,14 +81,33 @@ LRESULT CALLBACK WindowProc
 
     case WM_PAINT: {
       PAINTSTRUCT ps;
-      RECT rect;
+      RECT rect1, rect2;
 
       HDC hdc = BeginPaint(hwnd, &ps);
         FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW+1));
-        GetClientRect(hwnd, &rect);
-        DrawText(hdc, L"Win API, Uicode, gcc", -1, &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+        
+        GetClientRect(hwnd, &rect1);
+        DrawText(hdc, L"Win API, Uicode, gcc", -1, &rect1, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+        
         wsprintf(str, L"Привет, %s", L"мир!");
         TextOut(hdc, 10, 10, str, wcslen(str));
+        TextOut(hdc, 15, 18, str, wcslen(str));
+
+        rect2.left = 50;
+        rect2.top  = 55;
+        rect2.right = 155;
+        rect2.bottom = 100;
+        UINT flags = DT_LEFT | DT_WORDBREAK; // DT_WORD_ELLIPSIS | DT_NOCLIP
+        DrawTextExW(hdc, str, wsprintf(str, L"Изучение Win API\nУрок номер %d", 1), &rect2, flags, NULL);
+
+        HPEN pen = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
+        SelectObject(hdc, pen);
+        MoveToEx(hdc, 50, 55, NULL);
+        LineTo(hdc, 155, 55);
+        LineTo(hdc, 155, 100);
+        LineTo(hdc, 50, 100);
+        LineTo(hdc, 50, 55);
+
       EndPaint(hwnd, &ps);
       return 0;
     }
