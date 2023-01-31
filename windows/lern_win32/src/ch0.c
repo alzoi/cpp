@@ -98,7 +98,16 @@ LRESULT CALLBACK WindowProc
         rect2.right = 155;
         rect2.bottom = 100;
         UINT flags = DT_LEFT | DT_WORDBREAK; // DT_WORD_ELLIPSIS | DT_NOCLIP
-        DrawTextExW(hdc, str, wsprintf(str, L"Изучение Win API\nУрок номер %d", 1), &rect2, flags, NULL);
+        
+        HFONT hFont, hOldFont; 
+
+        hFont = (HFONT)GetStockObject(ANSI_VAR_FONT); 
+
+        if (hOldFont = (HFONT)SelectObject(hdc, hFont)) {  
+            //TextOut(hdc, 10, 50, L"Sample ANSI_VAR_FONT text", 25);        
+            DrawTextExW(hdc, str, wsprintf(str, L"Изучение Win API\nУрок номер %d", 1), &rect2, flags, NULL);
+            SelectObject(hdc, hOldFont); 
+        }
 
         HPEN pen = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
         SelectObject(hdc, pen);
