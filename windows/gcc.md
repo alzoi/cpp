@@ -1,5 +1,6 @@
 # Учебники
-https://github.com/yottaawesome/programming-windows-5th-edition
+https://github.com/yottaawesome/programming-windows-5th-edition  
+[Печать форматированной строки](https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l?view=msvc-170)  
 
 # Установка компилятора на Windows
 
