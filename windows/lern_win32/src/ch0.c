@@ -103,8 +103,7 @@ LRESULT CALLBACK WindowProc
 
         hFont = (HFONT)GetStockObject(ANSI_VAR_FONT); 
 
-        if (hOldFont = (HFONT)SelectObject(hdc, hFont)) {  
-            //TextOut(hdc, 10, 50, L"Sample ANSI_VAR_FONT text", 25);        
+        if (hOldFont = (HFONT)SelectObject(hdc, hFont)) {      
             DrawTextExW(hdc, str, wsprintf(str, L"Изучение Win API\nУрок номер %d", 1), &rect2, flags, NULL);
             SelectObject(hdc, hOldFont); 
         }
