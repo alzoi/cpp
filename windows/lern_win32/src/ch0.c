@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-HFONT FAR PASCAL MyCreateFont(void);
+HFONT CALLBACK MyCreateFont(void);
 
 HFONT g_font;
 
