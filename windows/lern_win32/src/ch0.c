@@ -103,9 +103,9 @@ LRESULT CALLBACK WindowProc
 
         hFont = (HFONT)GetStockObject(ANSI_VAR_FONT); 
 
-        if (hOldFont = (HFONT)SelectObject(hdc, hFont)) {      
-            DrawTextExW(hdc, str, wsprintf(str, L"Изучение Win API\nУрок номер %d", 1), &rect2, flags, NULL);
-            SelectObject(hdc, hOldFont); 
+        if (hOldFont = (HFONT)SelectObject(hdc, hFont)) {          
+          DrawTextExW(hdc, str, wsprintf(str, L"Изучение Win API\nУрок номер %d", 1), &rect2, flags, NULL);
+          SelectObject(hdc, hOldFont); 
         }
 
         HPEN pen = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
