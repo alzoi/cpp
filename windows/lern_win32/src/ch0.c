@@ -132,7 +132,7 @@ LRESULT CALLBACK WindowProc
   return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
 
-HFONT FAR PASCAL MyCreateFont(void) {
+HFONT CALLBACK MyCreateFont(void) {
 // https://learn.microsoft.com/ru-ru/windows/win32/gdi/creating-a-logical-font
 
   CHOOSEFONT cf; 
