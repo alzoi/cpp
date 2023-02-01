@@ -125,7 +125,7 @@ LRESULT CALLBACK WindowProc
         LineTo(hdc, 50, 55);
 
       EndPaint(hwnd, &ps);
-      return 0;
+      break;
     }
   }
   // Передаём сообщение обработчику по умолчанию.
