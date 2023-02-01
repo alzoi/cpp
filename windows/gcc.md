@@ -3,6 +3,7 @@ https://github.com/yottaawesome/programming-windows-5th-edition
 [Печать форматированной строки](https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l?view=msvc-170)  
 https://learn.microsoft.com/ru-ru/windows/win32/controls/cookbook-overview  
 https://www.transmissionzero.co.uk/computing/win32-apps-with-mingw/  
+https://stackoverflow.com/questions/16633860/win32-api-how-to-make-edit-text-to-accept-unsigned-float-only-in-c  
 
 # Установка компилятора на Windows
 
