@@ -1,5 +1,5 @@
-// g++.exe -Wall -O2 -c main.cpp -o main.o
-// g++.exe -s -lgdi32 -luser32 -lkernel32 -lcomctl32 -luxtheme -mwindows main.o -o main.exe 
+// g++.exe -Wall -O2 -c ch01.cpp -o ch01.o
+// g++.exe -s -lgdi32 -luser32 -lkernel32 -lcomctl32 -luxtheme -mwindows ch01.o -o ch01.exe 
 
 #define UNICODE
 
