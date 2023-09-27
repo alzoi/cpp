@@ -4,13 +4,15 @@
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
 <assemblyIdentity
     version="1.0.0.0"
     processorArchitecture="*"
     name="CompanyName.ProductName.YourApplication"
-    type="win32"
-/>
-<description>Your application description here.</description>
+    type="win32"/>
+
+<description>Description</description>
+
 <dependency>
     <dependentAssembly>
         <assemblyIdentity
@@ -19,10 +21,10 @@
             version="6.0.0.0"
             processorArchitecture="*"
             publicKeyToken="6595b64144ccf1df"
-            language="*"
-        />
+            language="*"/>
     </dependentAssembly>
 </dependency>
+
 </assembly>
 ```
 
