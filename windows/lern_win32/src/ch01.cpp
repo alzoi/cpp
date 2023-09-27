@@ -124,7 +124,7 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
   switch (message)
   {
   case WM_COMMAND:
-    if (LOWORD(wParam) == ID_But1)
+    if (LOWORD(wParam) == ID_But1) // При нажатии на кнопку "Передать" передаём текст из поля ввода Edit1 в Edit2
     {
       TCHAR input[101];
       GetWindowText(hEdit1, input, 100);
