@@ -130,7 +130,7 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
       // GetWindowText(hEdit1, input, 100);
       // SetWindowText(GetDlgItem(hWinMain, ID_Edit2), input);
 
-      int textLength = GetWindowTextLength(g_hWndEdit1);
+      int textLength = GetWindowTextLength(hEdit1);
       if (textLength > 0)
       {
         TCHAR *buffer = new TCHAR[textLength + 1];
