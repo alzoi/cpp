@@ -126,9 +126,18 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
   case WM_COMMAND:
     if (LOWORD(wParam) == ID_But1) // При нажатии на кнопку "Передать" передаём текст из поля ввода Edit1 в Edit2
     {
-      TCHAR input[101];
-      GetWindowText(hEdit1, input, 100);
-      SetWindowText(GetDlgItem(hWinMain, ID_Edit2), input);
+      // TCHAR input[101];
+      // GetWindowText(hEdit1, input, 100);
+      // SetWindowText(GetDlgItem(hWinMain, ID_Edit2), input);
+
+      int textLength = GetWindowTextLength(g_hWndEdit1);
+      if (textLength > 0)
+      {
+        TCHAR *buffer = new TCHAR[textLength + 1];
+        GetWindowText(hEdit1, buffer, textLength + 1);
+        SetWindowText(hEdit2, buffer);
+        delete[] buffer;
+      }
     }
     break;
 
