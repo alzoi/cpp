@@ -9,6 +9,7 @@ https://riptutorial.com/cplusplus
 https://compscicenter.ru/courses/cpp-1/  
 https://compscicenter.ru/courses/cpp-2/  
 [Modern C++ (2021 Lecture & Tutorials)](https://www.youtube.com/playlist?list=PLgnQpQtFTOGRv7VS6fYerEbT4ckBovKur)  
+[Примеры Windows-classic-samples](https://github.com/microsoft/Windows-classic-samples/tree/main/Samples/Win7Samples/begin/LearnWin32/SimpleDrawing)  
 
 # Онлайн компиляторы
 https://replit.com/languages/cpp  
