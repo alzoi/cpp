@@ -2,4 +2,8 @@
 https://bellard.org/tcc/  
 
 ## Установка
-Скачать [архив tcc](https://web.archive.org/web/20200227013749/http://download-mirror.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win32-bin.zip)
+Скачать
+[архив tcc win32](https://web.archive.org/web/20200227013749/http://download-mirror.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win32-bin.zip)  
+[архив tcc win64](https://web.archive.org/web/20231122125001/http://download-mirror.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win64-bin.zip)  
+[перечень заголовков API Win2](https://web.archive.org/web/20231122124847/http://nongnu.askapache.com/tinycc/winapi-full-for-0.9.27.zip)
+Распаковать в папку, папку include API Win32 переместить в папку проекта tcc.
