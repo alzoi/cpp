@@ -1,5 +1,6 @@
 # C++
 # Ресурсы для изучения
+https://github.com/isocpp/CppCoreGuidelines/  
 https://hackingcpp.com/  
 https://metanit.com/cpp/tutorial/  
 https://riptutorial.com/cplusplus  
