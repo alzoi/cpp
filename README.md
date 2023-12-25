@@ -16,6 +16,9 @@ https://stackoverflow.com/questions/61915005/force-win32-common-controls-to-draw
 # Онлайн компиляторы
 https://replit.com/languages/cpp  
 
+## Компиляторы С++
+https://winlibs.com/  
+
 # Полезные материалы
 https://github.com/ivafanas/cpp_shad_students  
 
