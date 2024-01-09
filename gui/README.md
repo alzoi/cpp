@@ -52,6 +52,9 @@ wine win_app.exe
 [SDL](https://www.libsdl.org/)  
 [SFML](https://www.sfml-dev.org/) стабильная  
 [GLFW](https://www.glfw.org/) наиболее проработанная, [пример](https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/2.1.hello_triangle/hello_triangle.cpp)  
+https://libwui.org/main_ru/  
+https://habr.com/ru/articles/768336/  
+https://lvgl.io/  
 
 ## OpenGL
 [https://paroj.github.io/gltut/](https://www.opengl.org/resources/libraries/)   
