@@ -13,6 +13,9 @@ https://compscicenter.ru/courses/cpp-2/
 [Примеры Windows-classic-samples](https://github.com/microsoft/Windows-classic-samples/tree/main/Samples/Win7Samples/begin/LearnWin32/SimpleDrawing)  
 https://stackoverflow.com/questions/61915005/force-win32-common-controls-to-draw-on-id2d1hwndrendertarget  
 
+# Библиотеки
+https://en.cppreference.com/w/cpp/links/libs  
+
 # Онлайн компиляторы
 https://replit.com/languages/cpp  
 
