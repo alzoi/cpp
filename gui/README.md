@@ -78,5 +78,5 @@ https://www.youtube.com/watch?v=CNEJofOOPSY&t=894s
 
 ## Библиотека GUI конмпонентов wxWidgets
 [wxWidgets на Just Dev Tutorials](https://www.youtube.com/watch?v=MfuBS9n5_aY&list=PL0qQTroQZs5vVmTuBew-nTx9DIu6rRl2c)  
-[Native and Cross Platform GUI Development](https://youtube.com/playlist?list=PL08Eb2VZaIE68fHiK4A7ummg7WjTabpVF&si=86bCsZufcBJj9qTb)  
+[How to use wxWidgets with Dev-C++, Native and Cross Platform GUI Development](https://www.youtube.com/watch?v=FDMsNINs3CE&list=PL08Eb2VZaIE68fHiK4A7ummg7WjTabpVF&index=11)  
 [Книга Programming with wxDev-C++](https://sourceforge.net/projects/wxdevcpp-book/files/)  
