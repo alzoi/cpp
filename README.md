@@ -16,7 +16,11 @@ https://stackoverflow.com/questions/61915005/force-win32-common-controls-to-draw
 # Библиотеки
 https://en.cppreference.com/w/cpp/links/libs  
 
+# Компиляторы
+https://jmeubank.github.io/tdm-gcc/  
+
 # Онлайн компиляторы
+https://godbolt.org/  
 https://replit.com/languages/cpp  
 
 ## Компиляторы С++
