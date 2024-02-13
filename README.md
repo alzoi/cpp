@@ -12,6 +12,7 @@ https://compscicenter.ru/courses/cpp-2/
 [Modern C++ (2021 Lecture & Tutorials)](https://www.youtube.com/playlist?list=PLgnQpQtFTOGRv7VS6fYerEbT4ckBovKur)  
 [Примеры Windows-classic-samples](https://github.com/microsoft/Windows-classic-samples/tree/main/Samples/Win7Samples/begin/LearnWin32/SimpleDrawing)  
 https://stackoverflow.com/questions/61915005/force-win32-common-controls-to-draw-on-id2d1hwndrendertarget  
+[Курс по C++ в CS центре 2019](https://habr.com/ru/companies/JetBrains-education/articles/467781/)  
 
 # Библиотеки
 https://en.cppreference.com/w/cpp/links/libs  
