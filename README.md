@@ -17,8 +17,8 @@ https://stackoverflow.com/questions/61915005/force-win32-common-controls-to-draw
 https://en.cppreference.com/w/cpp/links/libs  
 
 # Компиляторы
-https://www.mingw-w64.org/
-https://winlibs.com/
+https://www.mingw-w64.org/  
+https://winlibs.com/  
 https://jmeubank.github.io/tdm-gcc/  
 
 # Онлайн компиляторы
