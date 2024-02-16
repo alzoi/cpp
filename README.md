@@ -13,7 +13,8 @@ https://compscicenter.ru/courses/cpp-2/
 [Примеры Windows-classic-samples](https://github.com/microsoft/Windows-classic-samples/tree/main/Samples/Win7Samples/begin/LearnWin32/SimpleDrawing)  
 https://stackoverflow.com/questions/61915005/force-win32-common-controls-to-draw-on-id2d1hwndrendertarget  
 [Курс по C++ в CS центре 2018](https://habr.com/ru/companies/JetBrains-education/articles/467781/)  
-[Эффективное использование С++ 2019](https://youtube.com/playlist?list=PLntPXGBtcaSj11jJWYiwCM2QyDG22SgXr&si=YhAv9Lb_ZPDZT2nu)
+[Эффективное использование С++ 2019](https://youtube.com/playlist?list=PLntPXGBtcaSj11jJWYiwCM2QyDG22SgXr&si=YhAv9Lb_ZPDZT2nu)  
+https://habr.com/ru/articles/792834/  
 
 # Библиотеки
 https://en.cppreference.com/w/cpp/links/libs  
