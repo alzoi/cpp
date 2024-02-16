@@ -18,6 +18,7 @@ https://habr.com/ru/articles/792834/
 
 # Библиотеки
 https://en.cppreference.com/w/cpp/links/libs  
+https://github.com/fffaraz/awesome-cpp  
 
 # Компиляторы
 https://www.mingw-w64.org/  
