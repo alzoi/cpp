@@ -55,6 +55,8 @@ wine win_app.exe
 https://libwui.org/main_ru/  
 https://habr.com/ru/articles/768336/  
 https://lvgl.io/  
+https://en.wikipedia.org/wiki/List_of_widget_toolkits  
+[Graphic User Interface](https://github.com/fffaraz/awesome-cpp?tab=readme-ov-file#gui)  
 
 ## OpenGL
 [https://paroj.github.io/gltut/](https://www.opengl.org/resources/libraries/)   
