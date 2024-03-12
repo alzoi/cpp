@@ -18,6 +18,7 @@ https://stackoverflow.com/questions/61915005/force-win32-common-controls-to-draw
 [Курс по C++ в CS центре 2018](https://habr.com/ru/companies/JetBrains-education/articles/467781/)  
 [Эффективное использование С++ 2019](https://youtube.com/playlist?list=PLntPXGBtcaSj11jJWYiwCM2QyDG22SgXr&si=YhAv9Lb_ZPDZT2nu)  
 https://habr.com/ru/articles/792834/  
+[Статическое связывание](https://ru.stackoverflow.com/questions/982371/%D0%9A%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D1%83%D1%8E-%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83)
 
 # Библиотеки
 https://en.cppreference.com/w/cpp/links/libs  
